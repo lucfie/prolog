@@ -1,0 +1,12 @@
+aendere([First|Rest],Out):-
+    number(First),
+    E is First*2,
+    aendere(Rest,Ret),
+    Out = [E|Ret].
+aendere([],[]).
+aendere([First|Rest],Out):-
+    not(number(First)),
+    aendere(Rest,Ret),
+    Out=Ret.
+
+
